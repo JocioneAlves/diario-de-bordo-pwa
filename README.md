@@ -1,8 +1,8 @@
-# Diário de Bordo — Otimização de Performance
+# Diário de Bordo — Otimização de Desempenho
 
 ## Descrição
 
-O Diário de Bordo é uma aplicação web desenvolvida para registrar, visualizar e excluir anotações. Os dados são armazenados no LocalStorage e a aplicação possui suporte a funcionamento offline por meio de Service Worker.
+O Diário de Bordo é uma aplicação web desenvolvida para registrar, visualizar e excluir anotações. Os dados são armazenados no LocalStorage e a aplicação possui suporte ao funcionamento offline por meio de Service Worker.
 
 ## Análise inicial
 
@@ -12,9 +12,10 @@ Foi realizada uma análise utilizando o Lighthouse do Google Chrome antes das ot
 
 * Código JavaScript que poderia ser simplificado.
 * CSS com regras que poderiam ser reduzidas.
-* Carregamento de scripts sem necessidade de bloquear a renderização.
-* Necessidade de melhorar a organização e o carregamento dos recursos.
-* Ausência de otimizações relacionadas ao carregamento de imagens, embora o projeto não utilize imagens pesadas.
+* Carregamento do JavaScript bloqueando a renderização.
+* Recursos desnecessários no carregamento inicial.
+* Possibilidade de melhorar a organização e o carregamento dos recursos.
+* O projeto não possui imagens pesadas que necessitem de conversão para WebP ou AVIF.
 
 ## Melhorias aplicadas
 
@@ -24,31 +25,31 @@ Foi realizada uma análise utilizando o Lighthouse do Google Chrome antes das ot
 * Remoção de código desnecessário.
 * Organização dos recursos carregados pela aplicação.
 * Atualização do cache do Service Worker.
-* Uso de LocalStorage para manter os dados localmente.
-* Manutenção da aplicação funcionando offline.
-* O projeto não utiliza imagens pesadas, portanto não houve necessidade de conversão para WebP ou AVIF.
+* Uso do LocalStorage para armazenamento dos dados.
+* Manutenção do funcionamento offline da aplicação.
+* Como o projeto não utiliza imagens pesadas, não foi necessária a conversão para WebP ou AVIF.
 
 ## Comparativo antes e depois
 
-### Antes
+### Antes da otimização
 
 ![Lighthouse antes](lighthouse-antes.png)
 
-A análise inicial apresentou os gargalos relacionados ao carregamento e processamento dos recursos da aplicação.
+A análise inicial foi realizada com o Lighthouse antes da aplicação das otimizações. O relatório foi utilizado para identificar possíveis gargalos de carregamento e processamento.
 
-### Depois
+### Depois da otimização
 
 ![Lighthouse depois](lighthouse-depois.png)
 
-Após as otimizações, uma nova análise foi realizada utilizando o Lighthouse.
+Após as alterações, uma nova análise foi realizada com o Lighthouse para verificar o impacto das otimizações.
 
 ## Resultado
 
-As principais melhorias foram a redução do código CSS e JavaScript, o carregamento não bloqueante do JavaScript utilizando `defer` e a remoção de recursos desnecessários.
+As principais melhorias aplicadas foram a redução e simplificação do código CSS e JavaScript, o carregamento não bloqueante do JavaScript utilizando `defer` e a remoção de recursos desnecessários.
 
-A comparação dos relatórios demonstra a evolução da performance da aplicação após as otimizações.
+A comparação dos relatórios permite verificar a evolução do desempenho da aplicação após as otimizações.
 
-## Tecnologias
+## Tecnologias utilizadas
 
 * HTML5
 * CSS3
