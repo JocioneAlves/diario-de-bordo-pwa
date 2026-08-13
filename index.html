@@ -1,59 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Diário de Bordo</title>
-
-    <link rel="manifest" href="manifest.json">
-
     <meta name="theme-color" content="#1976d2">
-
+    <meta name="description" content="Diário de Bordo - Aplicação para registrar e consultar anotações.">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
+    <title>Diário de Bordo</title>
 </head>
 
 <body>
+    <main class="container">
+        <h1>Diário de Bordo</h1>
 
-    <div class="container">
+        <form id="entryForm">
+            <label for="title">Título</label>
+            <input type="text" id="title" required>
 
-        <h1>📘 Diário de Bordo</h1>
+            <label for="description">Descrição</label>
+            <textarea id="description" required></textarea>
 
-        <form id="form">
+            <label for="date">Data</label>
+            <input type="date" id="date" required>
 
-            <input
-                type="text"
-                id="titulo"
-                placeholder="Título"
-                required>
-
-            <textarea
-                id="descricao"
-                placeholder="Descrição"
-                required></textarea>
-
-            <input
-                type="date"
-                id="data"
-                required>
-
-            <button type="submit">
-                Salvar
-            </button>
-
+            <button type="submit">Adicionar entrada</button>
         </form>
 
-        <button id="installBtn" style="display:none">
-            Instalar Aplicativo
-        </button>
+        <section>
+            <h2>Minhas entradas</h2>
+            <div id="entries"></div>
+        </section>
+    </main>
 
-        <ul id="lista"></ul>
+    <script src="script.js" defer></script>
 
-    </div>
-
-    <script src="script.js"></script>
-
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("service-worker.js");
+            });
+        }
+    </script>
 </body>
-
 </html>
