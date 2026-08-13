@@ -33,13 +33,13 @@ Foi realizada uma análise utilizando o Lighthouse do Google Chrome antes das ot
 
 ### Antes da otimização
 
-![Lighthouse antes](lighthouse-antes.png)
+<img src="https://github.com/JocioneAlves/diario-de-bordo-pwa/blob/main/lighthouse-antes.png?raw=true" alt="Lighthouse antes" width="800">
 
-A análise inicial foi realizada com o Lighthouse antes da aplicação das otimizações. O relatório foi utilizado para identificar possíveis gargalos de carregamento e processamento.
+A análise inicial foi realizada com o Lighthouse antes da aplicação das otimizações.
 
 ### Depois da otimização
 
-![Lighthouse depois](lighthouse-depois.png)
+<img src="https://github.com/JocioneAlves/diario-de-bordo-pwa/blob/main/lighthouse-depois.png?raw=true" alt="Lighthouse depois" width="800">
 
 Após as alterações, uma nova análise foi realizada com o Lighthouse para verificar o impacto das otimizações.
 
