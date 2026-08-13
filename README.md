@@ -33,13 +33,13 @@ Foi realizada uma análise utilizando o Lighthouse do Google Chrome antes das ot
 
 ### Antes da otimização
 
-<img src="https://github.com/JocioneAlves/diario-de-bordo-pwa/blob/main/lighthouse-antes.png?raw=true" alt="Lighthouse antes" width="800">
+[Ver relatório Lighthouse — ANTES](./lighthouse-antes.png)
 
-A análise inicial foi realizada com o Lighthouse antes da aplicação das otimizações.
+A análise inicial foi realizada com o Lighthouse antes da aplicação das otimizações. O relatório foi utilizado para identificar possíveis gargalos de carregamento e processamento.
 
 ### Depois da otimização
 
-<img src="https://github.com/JocioneAlves/diario-de-bordo-pwa/blob/main/lighthouse-depois.png?raw=true" alt="Lighthouse depois" width="800">
+[Ver relatório Lighthouse — DEPOIS](./lighthouse-depois.png)
 
 Após as alterações, uma nova análise foi realizada com o Lighthouse para verificar o impacto das otimizações.
 
@@ -47,7 +47,7 @@ Após as alterações, uma nova análise foi realizada com o Lighthouse para ver
 
 As principais melhorias aplicadas foram a redução e simplificação do código CSS e JavaScript, o carregamento não bloqueante do JavaScript utilizando `defer` e a remoção de recursos desnecessários.
 
-A comparação dos relatórios permite verificar a evolução do desempenho da aplicação após as otimizações.
+A comparação dos relatórios permite verificar o desempenho da aplicação antes e depois das otimizações realizadas.
 
 ## Tecnologias utilizadas
 
